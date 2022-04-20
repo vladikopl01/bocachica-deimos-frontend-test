@@ -1,15 +1,15 @@
 import type { NextPage } from "next"
 import { Alert, Button, Container, Stack, Typography } from "@mui/material"
+import MetaMaskCard from "../components/connectors/MetaMask"
+import ProviderExample from "../components/ProviderExample"
 
 const Home: NextPage = () => {
   return (
     <Container>
+      <ProviderExample />
       <Stack spacing={2}>
         <Typography variant="h3">BCDeimos</Typography>
-        <Alert severity="warning">Metamask is not connected</Alert>
-        <Button variant="contained" color="success">
-          Connect to MetaMask
-        </Button>
+        <MetaMaskCard />
       </Stack>
     </Container>
   )
