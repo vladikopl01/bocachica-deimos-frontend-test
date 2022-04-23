@@ -27,10 +27,15 @@ function Child() {
   return null
 }
 
-export default function ProviderExample() {
+export default function ProviderExample({
+  children,
+}: {
+  children: React.ReactChild
+}) {
   return (
     <Web3ReactProvider connectors={connectors}>
       <Child />
+      {children}
     </Web3ReactProvider>
   )
 }
